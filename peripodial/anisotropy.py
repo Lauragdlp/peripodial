@@ -6,6 +6,8 @@ from tyssue.utils import data_at_opposite
 from tyssue.geometry.sheet_geometry import (
     SheetGeometry,
     WeightedPerimeterEllipsoidLameGeometry)
+from peripodial.polarity import update_weights
+
 
 def face_orientation(df, rcoords=["rx", "ry", "rz"]):
     """Returns a vector with the scaling term s and the first line
@@ -33,3 +35,15 @@ def anysotropy (sheet, coords=None, column=None, save_orientation=False):
         svd[:, 0] - svd[:, 1]) / (svd[:, 0] + svd[:, 1])
     
     return sheet.face_df["anisotropy"]
+
+def angle_distribution (sheet, coords=None, above_threshold=1):
+    if coords is None:
+        coords = sheet.coords
+
+    z_orientation = update_weights(sheet, 
+        threshold_angle=theta, 
+        below_threshold=1,
+        above_threshold=above_threshold)
+    sheet.vert_df["angle_vert"] = np.arcsin(z_orientation)
+    
+    return sheet.vert_df["angle_vert"]
