@@ -30,7 +30,7 @@ def draw_half_N_sheet(sheet, ax):
             'visible': False
             },
         'edge': {
-            'color': "#fcfcfc",
+            'color': "#2b5d0a",
             'colormap': "coolwarm",
              "width": 0.3,
             #'zorder': depth.values
