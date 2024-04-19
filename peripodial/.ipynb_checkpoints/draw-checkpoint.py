@@ -22,7 +22,7 @@ def draw_half_sheet(sheet, ax):
     return fig, ax
 
 
-def draw_half_N_sheet(sheet, ax):
+def draw_half_N_sheet(sheet, ax, coords = ['z', 'x']):
     sheet_copy = sheet.copy()
     sheet_copy.edge_df = sheet_copy.edge_df[sheet.edge_df["sy"] > 0] 
     draw_specs = {
@@ -37,7 +37,5 @@ def draw_half_N_sheet(sheet, ax):
             }
     }
     fig, ax = sheet_view(sheet_copy, ax=ax, coords = ['z', 'x'], **draw_specs)
-    ax.set_xticks([])
-    ax.set_yticks([])
-    
+   
     return fig, ax
