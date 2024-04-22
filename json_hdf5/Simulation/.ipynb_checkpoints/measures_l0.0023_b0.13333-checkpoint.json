@@ -1,0 +1,27 @@
+{
+        "face": {
+                "prefered_perimeter": 3.8
+        },
+        "settings": {
+                "geometry": "spherical",
+                "height_axis": "z",
+                "lumen_prefered_vol": 5700,
+                "lumen_vol_elasticity": 0.0023,
+                "threshold_length": 0.01,
+                "rosette_kwargs": {
+                        "threshold_length": 0.01,
+                        "p_4": 0.01,
+                        "p_5": 0.001
+                },
+                "barrier_radius": 13
+        },
+        "vert": {
+                "barrier_elasticity": 0.13333333333333333,
+                "delta_rho": 0
+        },
+        "metrics": {
+                "diameter": 33.881289579189364,
+                "middle_dia": 3.922662337020727,
+                "aniso_cell": 0.2571923472836855
+        }
+}
