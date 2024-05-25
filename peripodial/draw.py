@@ -11,7 +11,7 @@ def draw_half_sheet(sheet, ax):
             },
         'edge': {
             'color': sheet_copy.edge_df["weight"],
-            'colormap': "coolwarm",
+            'colormap': "coolwarm_r",
             #'zorder': depth.values
             }
     }
@@ -31,7 +31,7 @@ def draw_half_N_sheet(sheet, ax, coords = ['z', 'x']):
             },
         'edge': {
             'color': "#2b5d0a",
-            'colormap': "coolwarm",
+            'colormap': "coolwarm_r",
              "width": 0.3,
             #'zorder': depth.values
             }
