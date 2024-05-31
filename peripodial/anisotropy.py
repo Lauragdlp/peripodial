@@ -32,7 +32,7 @@ def anysotropy (sheet, coords=None, column=None, save_orientation=False):
         sheet.face_df[ocoords] = orientation
         
     sheet.face_df["anisotropy"] = (
-        svd[:, 0] - svd[:, 1]) / (svd[:, 0] + svd[:, 1])
+        svd[:, 0]/ svd[:, 1])
     
     return sheet.face_df["anisotropy"]
 
